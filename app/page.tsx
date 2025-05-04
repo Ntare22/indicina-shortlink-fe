@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Input } from "antd";
+import { Input } from "antd";
 import { Formik } from "formik";
 import 'antd/dist/antd.css';
 import { useRouter } from 'next/navigation';
@@ -40,7 +40,7 @@ export default function Home() {
                   throw new Error('Failed to shorten URL');
                 }
 
-                const data = await response.json();
+                // const data = await response.json();
                 toast.success('URL shortened successfully!');
                 resetForm();
                 router.push('/list');
